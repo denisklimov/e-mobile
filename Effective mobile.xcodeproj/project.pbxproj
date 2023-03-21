@@ -86,7 +86,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9D0E40A829C723A7006E2461 /* ViewModels */ = {
+		9D0E40A829C723A7006E2461 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9D91C00E29C43F5F00FB59DD /* SignInViewController.swift */,
@@ -94,7 +94,7 @@
 				9D94081329C4A11B004E3385 /* ProfileViewController.swift */,
 				9D0E40A629C72336006E2461 /* HomeViewController.swift */,
 			);
-			path = ViewModels;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		9DCD513129BBA06D0090747A /* Fonts */ = {
@@ -114,6 +114,7 @@
 				9D5566CC29CA49E60061E6C4 /* RoundedLabel.swift */,
 				9DCD513729BBB3E60090747A /* RoundedButton.swift */,
 				9DAA28D929C87BA600CD7BC7 /* GradientView.swift */,
+				9D91C01029C43FFC00FB59DD /* Extensions.swift */,
 			);
 			path = "Custom UI";
 			sourceTree = "<group>";
@@ -137,16 +138,13 @@
 		9DF246E929BB9DFB00B7EC79 /* Effective mobile */ = {
 			isa = PBXGroup;
 			children = (
-				9DF246EA29BB9DFB00B7EC79 /* AppDelegate.swift */,
-				9DF246EC29BB9DFB00B7EC79 /* SceneDelegate.swift */,
-				9D94081129C46304004E3385 /* CoreDataUserManager.swift */,
-				9D91C01229C4527200FB59DD /* AlertManager.swift */,
-				9D0E40A229C7015F006E2461 /* NetworkManager.swift */,
-				9D91C01029C43FFC00FB59DD /* Extensions.swift */,
-				9D0E40A829C723A7006E2461 /* ViewModels */,
+				9DF2914629CA64730025D4F9 /* Managers */,
+				9D0E40A829C723A7006E2461 /* Controllers */,
 				9D0E40A129C6FF87006E2461 /* Models */,
 				9DCD513629BBB3B20090747A /* Custom UI */,
 				9DCD513129BBA06D0090747A /* Fonts */,
+				9DF246EA29BB9DFB00B7EC79 /* AppDelegate.swift */,
+				9DF246EC29BB9DFB00B7EC79 /* SceneDelegate.swift */,
 				9DF246F329BB9DFC00B7EC79 /* Assets.xcassets */,
 				9DF246F029BB9DFB00B7EC79 /* Main.storyboard */,
 				9DF246F529BB9DFC00B7EC79 /* LaunchScreen.storyboard */,
@@ -154,6 +152,16 @@
 				9DF246F829BB9DFC00B7EC79 /* Info.plist */,
 			);
 			path = "Effective mobile";
+			sourceTree = "<group>";
+		};
+		9DF2914629CA64730025D4F9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9D94081129C46304004E3385 /* CoreDataUserManager.swift */,
+				9D91C01229C4527200FB59DD /* AlertManager.swift */,
+				9D0E40A229C7015F006E2461 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
