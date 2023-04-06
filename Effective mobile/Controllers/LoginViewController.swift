@@ -8,8 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
-    lazy var alertManager: AlertManager = AlertManager(viewController: self)
+    
     let usersCoreData: CoreDataUserManager = CoreDataUserManager()
     @IBOutlet weak var loginTextField: RoundedTextField!
     @IBOutlet weak var passwordTextField: RoundedTextField!
@@ -30,23 +29,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             nextTextField.becomeFirstResponder()
         } else {
             login()
-           // textField.resignFirstResponder()
         }
         return false
     }
 
     func login() {
-//      performSegue(withIdentifier: "loginToPageOneSegue", sender: nil)
-//      UserDefaults.standard.set(true, forKey: "isAuthorized")
         if usersCoreData.auth(login: loginTextField.text!, password: passwordTextField.text!) {
             performSegue(withIdentifier: "loginToPageOneSegue", sender: nil)
             UserDefaults.standard.set(true, forKey: "isAuthorized")
         } else {
-            alertManager.error(message: "Wrong login or password")
+            alertError(error: "Wrong login or password")
         }
     }
-    
- 
-    
 }
 

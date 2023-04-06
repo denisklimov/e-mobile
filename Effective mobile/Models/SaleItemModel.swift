@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SaleItemsModel: Decodable {
+struct SaleItemsModel: Codable {
     var flash_sale: Array<SaleItemModel>
 }
 
-struct SaleItemModel: Decodable {
+struct SaleItemModel: Codable {
     var category: String
     var name: String
     var price: Double

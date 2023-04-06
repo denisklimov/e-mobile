@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct LatestItemsModel: Decodable {
+struct LatestItemsModel: Codable {
     var latest: Array<LatestItemModel>
 }
 
-struct LatestItemModel: Decodable {
+struct LatestItemModel: Codable {
     var category: String
     var name: String
     var price: Int

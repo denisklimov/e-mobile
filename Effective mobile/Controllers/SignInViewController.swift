@@ -9,7 +9,6 @@ import UIKit
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
-    lazy var alertManager: AlertManager = AlertManager(viewController: self)
     let usersCoreData: CoreDataUserManager = CoreDataUserManager()
     @IBOutlet weak var passwordTextField: RoundedTextField!
     @IBOutlet weak var loginTextField: RoundedTextField!
@@ -44,20 +43,20 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     func signIn() {
         guard loginTextField.text != "" else {
-            alertManager.error(message: "Login is empty")
+            alertError(error: "Login is empty")
             return
         }
         guard passwordTextField.text != "" else {
-            alertManager.error(message: "Passsword is empty")
+            alertError(error: "Passsword is empty")
             return
         }
         guard emailTextField.text!.isEmail else {
-            alertManager.error(message: "Invalid e-mail format")
+            alertError(error: "Invalid e-mail format")
             return
         }
         
         if usersCoreData.isExisting(login: loginTextField.text!) {
-            alertManager.error(message: "User already exists")
+            alertError(error: "User already exists")
         } else {
             let userObject = User(entity: usersCoreData.entity!, insertInto: usersCoreData.coreDataContext)
             userObject.login = loginTextField.text
